@@ -1,0 +1,4 @@
+/sessions/*.session
+/members/*.csv
+/*.session
+/vars.txt
