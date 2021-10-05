@@ -130,6 +130,7 @@ sleeper = 0
 for user in users:
     if sleeper > wait_after:
         sleeper = 0
+        print(f"Waiting ${sleeper_time} Seconds...")
         time.sleep(sleeper_time)
 
     sleeper += 1
@@ -153,7 +154,7 @@ for user in users:
         user_to_add = InputPeerUser(user['id'], user['access_hash'])
 
         client(InviteToChannelRequest(target_group_entity, [user_to_add]))
-        print("Waiting 60 Seconds...")
+        print(f"Waiting ${time_to_wait} Seconds...")
         time.sleep(time_to_wait)
     except PeerFloodError:
         print("Getting Flood Error from telegram. Script is stopping now. Please try again after some time.")
