@@ -133,7 +133,6 @@ for user in users:
         print(f"Waiting ${sleeper_time} Seconds...")
         time.sleep(sleeper_time)
 
-    sleeper += 1
 
     flag = False
     for member in members:
@@ -149,6 +148,7 @@ for user in users:
 
     if flag:
         continue
+    sleeper += 1
     try:
         print("Adding {}".format(user['id']))
         user_to_add = InputPeerUser(user['id'], user['access_hash'])
